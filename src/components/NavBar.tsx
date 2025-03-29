@@ -13,3 +13,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+//API KEY RAWG.io
+// 5ec77abcfad34a67a9888be67f04d7b6

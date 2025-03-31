@@ -6,21 +6,23 @@ import {
   SkeletonText,
   Stack,
 } from "@chakra-ui/react";
+import GameCardContainer from "./GameCardContainer";
 
 const GameCardSkeleton = () => {
   return (
-    <Card.Root width={"350px"} borderRadius={10} overflow={"hidden"}>
-      <Stack gap={1}>
-        <Skeleton height="200px"></Skeleton>
-
-        <SkeletonText noOfLines={1} />
-        <HStack marginX={3}>
-          <SkeletonCircle size="10" />
-          <SkeletonCircle size="10" />
-          <SkeletonCircle size="10" />
-        </HStack>
-      </Stack>
-    </Card.Root>
+    <GameCardContainer>
+      <Card.Root>
+        <Stack gap={1}>
+          <Skeleton height="200px"></Skeleton>
+          <SkeletonText noOfLines={1} />
+          <HStack>
+            <SkeletonCircle size="10" />
+            <SkeletonCircle size="10" />
+            <SkeletonCircle size="10" />
+          </HStack>
+        </Stack>
+      </Card.Root>
+    </GameCardContainer>
   );
 };
 

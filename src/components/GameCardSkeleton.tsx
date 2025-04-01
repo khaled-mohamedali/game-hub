@@ -11,7 +11,7 @@ import GameCardContainer from "./GameCardContainer";
 const GameCardSkeleton = () => {
   return (
     <GameCardContainer>
-      <Card.Root>
+      <Card.Root width={400}>
         <Stack gap={1}>
           <Skeleton height="200px"></Skeleton>
           <SkeletonText noOfLines={1} />

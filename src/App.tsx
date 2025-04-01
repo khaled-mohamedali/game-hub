@@ -16,7 +16,7 @@ function App() {
         <NavBar></NavBar>
       </GridItem>
       <Show when={isLg}>
-        <GridItem area={"aside"}>
+        <GridItem area={"aside"} paddingX={5}>
           <GenreList />
         </GridItem>
       </Show>

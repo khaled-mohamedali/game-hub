@@ -1,5 +1,5 @@
+import { GameQuery } from "@/App";
 import useData from "./useData";
-import { Genre } from "./useGenres";
 
 export interface Game {
   id: number;
@@ -15,13 +15,13 @@ export interface Platform {
   slug: string
 }
 
-const useGames = (seletedGenre : Genre | null, selectedPlatform: Platform | null) => useData<Game>("/games",
+const useGames = (gameQuery:GameQuery) => useData<Game>("/games",
   {
     params:{
-      genres:seletedGenre?.id,
-      platforms: selectedPlatform?.id
+      genres:gameQuery.genre?.id,
+      platforms: gameQuery.platform?.id
     }},
-  [seletedGenre?.id, selectedPlatform?.id]
+  [gameQuery]
 )
 
 export default useGames

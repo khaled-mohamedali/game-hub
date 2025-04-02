@@ -2,6 +2,7 @@ import { Platform } from "@/hooks/usePlatform";
 import usePlatforms from "@/hooks/usePlatform";
 import { Button, Menu, Portal } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
+
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
   selectedPlatform: Platform | null;

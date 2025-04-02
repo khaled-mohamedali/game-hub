@@ -1,5 +1,13 @@
 import useGenre, { Genre } from "@/hooks/useGenres";
-import { Button, HStack, Image, List, Spinner, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Heading,
+  HStack,
+  Image,
+  List,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 
 interface Props {
   onSelectedGenre: (genre: Genre) => void;
@@ -11,6 +19,9 @@ const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
 
   return (
     <>
+      <Heading fontSize="2xl" marginBottom={3}>
+        Genres
+      </Heading>
       {error && <Text>Error loading the types</Text>}
       <List.Root variant="plain">
         {isLoading && <Spinner></Spinner>}
